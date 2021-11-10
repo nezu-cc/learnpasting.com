@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build: .
+    container_name: learnpasting
+    restart: always
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.learnpasting.entrypoints=https"
+      - "traefik.http.routers.learnpasting.rule=Host(`learnpasting.com`)"
+      - "traefik.http.routers.learnpasting.tls=true"
+      - "traefik.http.routers.learnpasting.service=learnpasting"
+      - "traefik.http.services.learnpasting.loadbalancer.server.port=80"
+      - "traefik.docker.network=proxy"
+networks:
+  proxy:
+    external: true

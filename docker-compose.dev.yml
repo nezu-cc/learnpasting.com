@@ -1,0 +1,10 @@
+services:
+  web:
+    restart: 'no'
+    ports:
+      - 8080:80
+    volumes:
+      - ./public:/usr/share/nginx/html/
+networks:
+  proxy:
+    external: false

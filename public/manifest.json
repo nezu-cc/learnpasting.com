@@ -1,0 +1,18 @@
+{
+  "name": "Learn Pasting",
+  "short_name": "Learn Pasting",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png"
+    }
+  ],
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fff",
+  "theme_color": "#e5d793",
+  "description": "The best online learning platform that will help you on your way to become the best coder the world has ever seen",
+  "dir": "ltr",
+  "lang": "en-US"
+}
